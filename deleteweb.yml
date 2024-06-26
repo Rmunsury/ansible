@@ -1,0 +1,19 @@
+---
+
+
+- hosts: all
+  become: true
+  tasks:
+
+
+
+   - name: copy the file from location to server
+     ansible.builtin.copy:
+           src: index.html
+           dest: /var/www/html
+           owner: root
+           group: root
+           mode: 0644
+
+
+
